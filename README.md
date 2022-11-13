@@ -14,11 +14,10 @@ The Tech Stack:
 **Instructions to run:**
 
 
-Start a local blockchain network using:** npx hardhat node**
+Start a local blockchain network using: **npx hardhat node**
 
 
-Deploy the contract using: **npx hardhat run scripts/deploy.js --network localhost
-**
+Deploy the contract using: **npx hardhat run scripts/deploy.js --network localhost**
 
 Install dependencies using: **npm install**
 
