@@ -10,3 +10,9 @@ The Flow:
 The Tech Stack:
 
 ![image](https://user-images.githubusercontent.com/52329525/201524461-c65f7b2d-61f3-4b07-a760-85161ba960da.png)
+
+Instructions to run:
+Start a local blockchain network using: npx hardhat node
+Deploy the contract using: npx hardhat run scripts/deploy.js --network localhost
+Install dependencies using: npm install
+Start the react project: npm start
