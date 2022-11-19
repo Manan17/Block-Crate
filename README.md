@@ -14,6 +14,8 @@ The Tech Stack:
 **Instructions to run:**
 
 
+Start the server: **node index.js**
+
 Start a local blockchain network using: **npx hardhat node**
 
 
