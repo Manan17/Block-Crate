@@ -3,6 +3,10 @@ const main = async () => {
   const filesharing = await FileSharing.deploy();
   await filesharing.deployed();
   console.log("File Sharing deployed to: ", filesharing.address);
+  const ChatApp = await hre.ethers.getContractFactory("ChatApp");
+  const chatapp = await ChatApp.deploy();
+  await chatapp.deployed();
+  console.log("Chat App deployed to: ", chatapp.address);
 };
 
 const runMain = async () => {

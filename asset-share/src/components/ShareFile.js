@@ -18,6 +18,7 @@ const ShareFile = () => {
     publicKey,
     privateKey,
     receivedFiles,
+    name,
   } = useContext(FileAppContext);
   const [pubKey, setPubKey] = useState("");
   const [privKey, setPrivKey] = useState("");
@@ -26,7 +27,9 @@ const ShareFile = () => {
   const [receiverAddress, setReceiverAddress] = useState("");
   const [yourName, setYourName] = useState("");
   const [description, setDescription] = useState("");
+  const [username, setUserName] = useState("");
   useEffect(() => {
+    // fetchData();
     console.log(receivedFiles);
   }, [receivedFiles]);
   const getKeys = async () => {
@@ -101,16 +104,24 @@ const ShareFile = () => {
   };
   return (
     <div className="bg-[#10141A] h-screen">
-      <Navbar />
       {account.length > 0 ? (
         <div className="flex flex-col">
           <div className="flex items-center justify-around">
-            <button
-              className="text-white font-semibold bg-[#556195] px-4 py-2"
-              onClick={() => createAUser()}
-            >
-              Create User
-            </button>
+            {!name ? (
+              <div className="flex">
+                <input
+                  type="text"
+                  value={username}
+                  onChange={(e) => setUserName(e.target.value)}
+                />
+                <button
+                  className="text-white font-semibold bg-[#556195] px-4 py-2"
+                  onClick={() => createAUser(username)}
+                >
+                  Create User
+                </button>
+              </div>
+            ) : null}
             <button
               className="text-white font-semibold bg-[#556195] px-4 py-2"
               onClick={() => getReceivedFiles()}
